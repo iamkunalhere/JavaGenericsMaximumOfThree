@@ -29,4 +29,18 @@ public class MaximumOfThree {
         }
         return maxNumber;
     }
+    // Method for finding maximum of three strings
+    public static String maxString(String firstString, String secondString, String thirdString) {
+        String maxString = null;
+        if (firstString.compareTo(secondString) == True && firstString.compareTo(thirdString) == True) {
+            maxString=firstString;
+        }
+        else if (secondString.compareTo(firstString) == True && secondString.compareTo(thirdString) == True) {
+            maxString=secondString;
+        }
+        else if (thirdString.compareTo(firstString) == True && thirdString.compareTo(secondString) == True) {
+            maxString=thirdString;
+        }
+        return maxString;
+    }
 }
