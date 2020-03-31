@@ -32,13 +32,13 @@ public class MaximumOfThree {
     // Method for finding maximum of three strings
     public static String maxString(String firstString, String secondString, String thirdString) {
         String maxString = null;
-        if (firstString.compareTo(secondString) == True && firstString.compareTo(thirdString) == True) {
+        if (firstString.length() > secondString.length() && firstString.length() > thirdString.length()) {
             maxString=firstString;
         }
-        else if (secondString.compareTo(firstString) == True && secondString.compareTo(thirdString) == True) {
+        else if (secondString.length() > firstString.length() && secondString.length() > thirdString.length()) {
             maxString=secondString;
         }
-        else if (thirdString.compareTo(firstString) == True && thirdString.compareTo(secondString) == True) {
+        else if (thirdString.length() > firstString.length() && thirdString.length() > secondString.length()) {
             maxString=thirdString;
         }
         return maxString;
