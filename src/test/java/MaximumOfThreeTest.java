@@ -23,5 +23,22 @@ public class MaximumOfThreeTest {
         int thirdMaximum = maximumOfThreeObject.maxInteger(1,2,3);
         Assert.assertEquals(3,thirdMaximum);
     }
-
+    // Test for if first float is max
+    @Test
+    public void givenInput_whenFirstFloatIsMaximum_shouldReturnMaximum() {
+        Float firstMaximum = maximumOfThreeObject.maxFloat(3.3f,2.2f,1.1f);
+        Assert.assertEquals((Float)3.3f,firstMaximum);
+    }
+    // Test for if second float is max
+    @Test
+    public void givenInput_whenSecondFloatIsMaximum_shouldReturnMaximum() {
+        Float secondMaximum = maximumOfThreeObject.maxFloat(1.1f,3.3f,2.2f);
+        Assert.assertEquals((Float) 3.3f,secondMaximum);
+    }
+    // Test for if third float is max
+    @Test
+    public void givenInput_whenThirdFloatIsMaximum_shouldReturnMaximum() {
+        Float thirdMaximum = maximumOfThreeObject.maxFloat(1.1f,2.2f,3.3f);
+        Assert.assertEquals((Float)3.3f,thirdMaximum);
+    }
 }
