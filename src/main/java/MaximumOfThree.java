@@ -1,28 +1,14 @@
+import java.util.Arrays;
+
 public class  MaximumOfThree <E extends Comparable<E>>{
 
-    E firstArgument,secondArgument,thirdArgument;
+    E[] arguments;
 
-    public MaximumOfThree(E firstArgument,E secondArgument,E thirdArgument) {
-        this.firstArgument=firstArgument;
-        this.secondArgument=secondArgument;
-        this.thirdArgument=thirdArgument;
+    public MaximumOfThree(E[] array) {
+        this.arguments=array;
     }
-    public E findMaximum() {
-        return MaximumOfThree.findMaximum(firstArgument,secondArgument,thirdArgument);
-    }
-
-    private static <E extends Comparable<E>> E findMaximum(E firstArgument, E secondArgument, E thirdArgument) {
-        E max = null;
-        int True = 1;
-        if (firstArgument.compareTo(secondArgument) == True && firstArgument.compareTo(thirdArgument) == True) {
-            max=firstArgument;
-        }
-        else if (secondArgument.compareTo(firstArgument) == True && secondArgument.compareTo(thirdArgument) == True) {
-            max=secondArgument;
-        }
-        else if (thirdArgument.compareTo(firstArgument) == True && thirdArgument.compareTo(secondArgument) == True){
-            max=thirdArgument;
-        }
-        return max;
+    public static <E extends Comparable<E>> E findMaximum(E... arguments) {
+        Arrays.sort(arguments);
+        return arguments[arguments.length-1];
     }
 }
