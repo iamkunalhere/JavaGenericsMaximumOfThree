@@ -8,55 +8,64 @@ public class MaximumOfThreeTest {
     // Test for if first integer is max
     @Test
     public void givenInput_whenFirstNumberIsMaximum_shouldReturnMaximum() {
-        Integer firstMaximum = (Integer) maximumOfThreeObject.findMaximum(3,2,1);
-        Assert.assertEquals( Integer.valueOf(3),firstMaximum);
+        maximumOfThreeObject = new MaximumOfThree(3,2,1);
+        Integer firstMaximum = (Integer) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals( (Integer)3,firstMaximum);
     }
     // Test for if second integer is max
     @Test
     public void givenInput_whenSecondNumberIsMaximum_shouldReturnMaximum() {
-        Integer secondMaximum = maximumOfThreeObject.findMaximum(1,3,2);
-        Assert.assertEquals(Integer.valueOf(3),secondMaximum);
+        maximumOfThreeObject = new MaximumOfThree(2,3,1);
+        Integer secondMaximum = (Integer) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals( (Integer)3,secondMaximum);
     }
     // Test for if third integer is max
     @Test
     public void givenInput_whenThirdNumberIsMaximum_shouldReturnMaximum() {
-        Integer thirdMaximum = maximumOfThreeObject.findMaximum(1,2,3);
-        Assert.assertEquals(Integer.valueOf(3),thirdMaximum);
+        maximumOfThreeObject = new MaximumOfThree(1,2,3);
+        Integer thirdMaximum = (Integer) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals( (Integer)3,thirdMaximum);
     }
     // Test for if first float is max
     @Test
     public void givenInput_whenFirstFloatIsMaximum_shouldReturnMaximum() {
-        Float firstMaximum = maximumOfThreeObject.findMaximum(3.3f,2.2f,1.1f);
-        Assert.assertEquals(Float.valueOf(3.3f),firstMaximum);
+        maximumOfThreeObject = new MaximumOfThree(3.3f,1.1f,2.2f);
+        Float firstMaximum = (Float) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals((Float)3.3f,firstMaximum);
     }
     // Test for if second float is max
     @Test
     public void givenInput_whenSecondFloatIsMaximum_shouldReturnMaximum() {
-        Float secondMaximum = maximumOfThreeObject.findMaximum(1.1f,3.3f,2.2f);
-        Assert.assertEquals(Float.valueOf(3.3f),secondMaximum);
+        maximumOfThreeObject = new MaximumOfThree(1.1f,3.3f,2.2f);
+        Float secondMaximum = (Float) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals((Float)3.3f,secondMaximum);
     }
     // Test for if third float is max
     @Test
     public void givenInput_whenThirdFloatIsMaximum_shouldReturnMaximum() {
-        Float thirdMaximum = maximumOfThreeObject.findMaximum(1.1f,2.2f,3.3f);
-        Assert.assertEquals(Float.valueOf(3.3f),thirdMaximum);
+        maximumOfThreeObject = new MaximumOfThree(2.2f,1.1f,3.3f);
+        Float thirdMaximum = (Float) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals((Float)3.3f,thirdMaximum);
     }
     // Test for if first string is max
     @Test
     public void givenInput_whenFirstStringIsMaximum_shouldReturnMaximum() {
-        String firstMaximum = maximumOfThreeObject.findMaximum("banana","apple","asdf");
-        Assert.assertEquals("banana",firstMaximum);
+        maximumOfThreeObject = new MaximumOfThree("banana","apple","asdf");
+        String firstMaximum = (String) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals((String)"banana",firstMaximum);
     }
     // Test for if second string is max
     @Test
     public void givenInput_whenSecondStringIsMaximum_shouldReturnMaximum() {
-        String secondMaximum = maximumOfThreeObject.findMaximum("apple","banana","asdf");
-        Assert.assertEquals("banana",secondMaximum);
+        maximumOfThreeObject = new MaximumOfThree("apple","banana","asdf");
+        String secondMaximum = (String) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals((String)"banana",secondMaximum);
     }
     // Test for if third string is max
     @Test
     public void givenInput_whenThirdStringIsMaximum_shouldReturnMaximum() {
-        String thirdMaximum = maximumOfThreeObject.findMaximum("apple","asdf","banana");
-        Assert.assertEquals("banana",thirdMaximum);
+        maximumOfThreeObject = new MaximumOfThree("asdf","apple","banana");
+        String thirdMaximum = (String) maximumOfThreeObject.findMaximum();
+        Assert.assertEquals((String)"banana",thirdMaximum);
     }
 }
